@@ -1,0 +1,17 @@
+/* Variable Font: Outfit */
+@font-face {
+  font-family: 'Outfit';
+  src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* Defines the available weight range */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Static Font: Young Serif */
+@font-face {
+  font-family: 'Young Serif';
+  src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+  font-weight: 400; /* Only one weight available */
+  font-style: normal;
+  font-display: swap;
+}
