@@ -57,34 +57,6 @@ body{
     font-weight: 600;
     line-height: 1;
   }
-  dl {
-    display: grid;
-    gap: 8px;
-    .prep-item {
-      position: relative;
-      display: flex; 
-      align-items: center;
-      text-align: left;
-      justify-content: start;
-      padding-left: 8px; 
-      gap: 5px;
-      color: var(--stone-600);
-      &::before{
-        position: absolute;
-        content: ''; 
-        background-color: var(--rose-800); 
-        left: 0; 
-        top: 50%;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-      }
-      dt{
-        text-indent: 36px;
-        font-weight: 600;
-      }
-    }
-  }
 }
 
 .recipe-details{
@@ -96,87 +68,110 @@ body{
     font-size: var(--text-preset-2);
     color: var(--brown-800);
   }
-
-  .list{
-    display: grid;
-    gap: 8px;
-    list-style: none;
-  }
-
-  .ingredient-list{
-    padding-left: 8px; 
-    li {
-      position: relative;
-      padding-left: 36px;
-      color: var(--stone-600);
-      font-size: var(--text-preset-4);
-      &::before{
-        position: absolute;
-        content: ''; 
-        background-color: var(--rose-800); 
-        left: 0; 
-        top: 50%;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-      }
-    }
-  }
-  
-  .instruction-list{
-    padding-left: 8px;
-    counter-reset: pseudo-counter;
-    li {
-      position: relative;
-      font-size: var(--text-preset-4);
-      font-weight: 400;
-      color: var(--stone-600);
-      counter-increment: pseudo-counter;
-      padding-left: 36px;
-      line-height: 1.5;
-      .bold-highlight {
-        font-weight: 700;
-      }
-      &::before{
-        position: absolute;
-        content: counter(pseudo-counter) '.'; 
-        left: 0; 
-        top: 0;
-        color: var(--brown-800);
-        font-size: var(--text-preset-4);
-        font-weight: 700;
-      }
-    }
-  }
   p{
     color: var(--stone-600);
     font-size: var(--text-preset-4);
     font-weight: 400;
   }
-  .nutrition-list{
-    .nutrition-item{
-      position: relative;
-      display: grid; 
-      grid-template-columns: repeat(2, 1fr);
-      font-size: var(--text-preset-4);
-      line-height: 1.5;
-      padding: 12px 0px;
-      border-bottom: 1px solid var(--stone-150);
-      dt, dd{
-        text-align: left;
-        text-indent: 36px;
-      }
-      dt {
-        color: var(--stone-600);
-        font-weight: 400;
-      }
-      dd{
-        color: var(--brown-800);
-        font-weight: 700;
-      }
+}
+
+.list{
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  padding-left: 8px; 
+  li{
+    .bold-highlight {
+      font-weight: 700;
     }
   }
 }
+
+.preparation-list {
+  padding-left: 0px;
+  .prep-item {
+    position: relative;
+    padding-left: 36px;
+    color: var(--stone-600);
+    &::before{
+      position: absolute;
+      content: ''; 
+      background-color: var(--rose-800); 
+      left: 8px; 
+      top: 50%;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.ingredient-list{
+  li {
+    position: relative;
+    padding-left: 36px;
+    color: var(--stone-600);
+    font-size: var(--text-preset-4);
+    &::before{
+      position: absolute;
+      content: ''; 
+      background-color: var(--rose-800); 
+      left: 0; 
+      top: 50%;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.instruction-list{
+  counter-reset: pseudo-counter;
+  li {
+    position: relative;
+    font-size: var(--text-preset-4);
+    font-weight: 400;
+    color: var(--stone-600);
+    counter-increment: pseudo-counter;
+    padding-left: 36px;
+    line-height: 1.5;
+    &::before{
+      position: absolute;
+      content: counter(pseudo-counter) '.'; 
+      left: 0; 
+      top: 0;
+      color: var(--brown-800);
+      font-size: var(--text-preset-4);
+      font-weight: 700;
+    }
+  }
+}
+
+.nutrition-list{
+  .nutrition-item{
+    position: relative;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    font-size: var(--text-preset-4);
+    line-height: 1.5;
+    padding: 12px 0px;
+    border-bottom: 1px solid var(--stone-150);
+    dt, dd{
+      text-align: left;
+      text-indent: 36px;
+    }
+    dt {
+      color: var(--stone-600);
+      font-weight: 400;
+    }
+    dd{
+      color: var(--brown-800);
+      font-weight: 700;
+    }
+  }
+}
+
+
 
 .attribution {
   display: flex;
